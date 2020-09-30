@@ -125,12 +125,12 @@ When we call a function, it will create its own area in "stack" memory. So funct
 
 ```matlab
 function base()
-fun()
+fun(1)
 disp(A); % Error!
 end
 
-function fun()
-A = 1
+function fun(a)
+A = a
 end
 ```
 
@@ -151,7 +151,7 @@ Remember to close the file, if your program is long, it will cause memory leakag
 ### Formatted File I/O
 
 ```matlab
-fprintf((fid), "format", args);
+fprintf((fid), 'format', args);
 ```
 
 Format structure:
@@ -170,7 +170,7 @@ Format structure:
 
    %02.1f - demonstrate in MATLAB
 
-3. String
+3. String %s %c
 
 ### Static Plotting
 
@@ -214,14 +214,6 @@ plot(x, y)
 ```matlab
 A = imread('test.png');
 A = A(:, :, 1) / 3 + A(:, :, 2) / 3 + A(:, :, 3) / 3;
-imshow(A);
-```
-
-**Example3: gs2bw**
-
-```matlab
-A = imread('test.png');
-A = (A > 100) * 255;
 imshow(A);
 ```
 
