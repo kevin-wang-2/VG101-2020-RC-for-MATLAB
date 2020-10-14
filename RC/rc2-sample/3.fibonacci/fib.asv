@@ -1,7 +1,0 @@
-function ret = fib(n)
-    last = 1;
-    ret = 1;
-    for i = 1:n
-        temp = ret;
-        ret = ret +
-end
