@@ -8,3 +8,5 @@ C2 = arr(5);
 C3 = arr(6);
 lambda = 0.4:0.001:0.7;
 plot(lambda, sqrt((B1 * lambda ./ (lambda .^ 2 - C1) + B2 * lambda ./ (lambda .^ 2 - C2) + B3 * lambda ./ (lambda .^ 2 - C3))));
+xlabel('\lambda(\mum)');
+ylabel('n');
